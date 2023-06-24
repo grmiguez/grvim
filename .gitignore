@@ -1,0 +1,6 @@
+## file with database connections
+/lua/setup/dadbod.lua
+
+## auto generated files
+pack/
+plugin/
