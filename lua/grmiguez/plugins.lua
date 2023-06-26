@@ -223,6 +223,15 @@ return packer.startup(function(use)
     'mfussenegger/nvim-dap',
     config = get_setup('dap'),
   }
+  -- refactoring
+  use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+        {"nvim-lua/plenary.nvim"},
+        {"nvim-treesitter/nvim-treesitter"}
+    },
+    config = get_setup('refactoring'),
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   if PACKER_BOOTSTRAP then

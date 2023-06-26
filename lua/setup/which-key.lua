@@ -102,13 +102,11 @@ wk.register ({
 
 wk.register(
     {
-        ['<C-Enter>'] = { '<Plug>(DBUI_ExecuteQuery)', 'Execute selected query' }
+        ['<C-Enter>'] = { '<Plug>(DBUI_ExecuteQuery)', 'Execute selected query' },
+        ['<leader>em'] = { ':lua require(\'refactoring\').select_refactor()<CR>', 'Refactor' },
     },
     {
-        prefix = "<leader>",
-        silent = true,
         mode = "v",
-        noremap = true,
     }
 )
 
