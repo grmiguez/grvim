@@ -1,5 +1,5 @@
 # grvim
-My personal config for nvim
+My personal config for neovim
 
 ## Requeriments
  * Neovim >= 0.9.0
