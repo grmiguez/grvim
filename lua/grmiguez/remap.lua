@@ -21,12 +21,6 @@ vim.cmd([[
 map('n', '<Space>', '')
 map('v', '<Space>', '')
 
--- resize
-map('n', '<leader>ll', ':horizontal resize +10')
-map('n', '<leader>kk', ':horizontal resize -10')
-map('n', '<leader>l', ':vertical resize +5')
-map('n', '<leader>h', ':vertical resize -5')
-
 -- delete without sending deleted content to clipboard
 vim.cmd([[
     nnoremap <silent> D "_d

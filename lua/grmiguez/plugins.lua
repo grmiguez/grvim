@@ -161,6 +161,10 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ':TSUpdate'
   }
+  use {
+    'folke/neodev.nvim',
+    config = get_setup('neodev')
+  }
   -- autocomplete
   use {
     'VonHeikemen/lsp-zero.nvim',
@@ -183,6 +187,11 @@ return packer.startup(function(use)
     },
     config = get_setup('lsp-zero'),
   }
+  -- java syntax
+  use {
+    'uiiaoo/java-syntax.vim'
+  }
+
   -- multi line edition
   use {
     'mg979/vim-visual-multi',
@@ -219,10 +228,11 @@ return packer.startup(function(use)
     'kristijanhusak/vim-dadbod-ui'
   }
   -- debug
-  use {
-    'mfussenegger/nvim-dap',
-    config = get_setup('dap'),
-  }
+    use { 
+        "rcarriga/nvim-dap-ui",
+        requires = {"mfussenegger/nvim-dap"},
+        config = get_setup('dap')
+    }
   -- refactoring
   use {
     "ThePrimeagen/refactoring.nvim",

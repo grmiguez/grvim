@@ -71,10 +71,17 @@ wk.register(
             h = { ':split<CR>', 'Horizontal Split' },
         },
         d = {
-            name = "Database",
+            name = "Database && Debug",
             b = { ':DBUIToggle<CR>', 'View databases' },
             s = { '<Plug>(DBUI_SaveQuery)', 'Save query to fil' },
+            t = { ':lua require("dapui").toggle()<CR>', 'Open dap-ui' },
+            p = { ':lua require("dap").toggle_breakpoint()<CR>', 'Toggle breakpoint' },
+            c = { ':lua require("dap").continue()<CR>', 'Continue/Start session' },
+            o = { ':lua require("dap").step_over()<CR>', 'Step over' },
+            i = { ':lua require("dap").step_into()<CR>', 'Step into' },
+            x = { ':lua require("dap").close()<CR>', 'close' }
         },
+
     },
     {
         prefix = "<leader>",
