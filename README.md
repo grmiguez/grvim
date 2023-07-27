@@ -37,6 +37,12 @@ let g:db_ui_auto_execute_table_helpers = 1
 let g:db_ui_use_nerd_fonts = 1
 ]])
 ```
+## Debugger configuration
+* Install the debug adapter (see https://github.com/mfussenegger/nvim-dap/wiki/Debug-Adapter-installation) and create the config file:
+```
+$ touch ~/.config/nvim/setup/dap.lua
+```
+* Then add the required configurations according to the debug adapter.
 
 ## Install Language Servers
 * To install language servers open neovim and use mason with `:Mason`, then search for the one you need and press i to install it.
