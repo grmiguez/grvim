@@ -13,10 +13,10 @@ wk.register(
     {
         f = {
             name = "Files",
-            f = { ':lua require(\'telescope.builtin\').find_files()<CR>', 'Find Files' },
-            g = { ':lua require(\'telescope.builtin\').live_grep()<CR>', 'Grep' },
-            s = { ':lua require(\'telescope.builtin\').grep_string()<CR>', 'Grep String' },
-            h = { ':lua require(\'telescope.builtin\').resume()<CR>', 'Last Search (includes git)' },
+            f = { ':lua require(\'telescope.builtin\').find_files(require(\'telescope.themes\').get_ivy({hidden = true}))<CR>', 'Find Files' },
+            g = { ':lua require(\'telescope.builtin\').live_grep(require(\'telescope.themes\').get_ivy({hidden = true}))<CR>', 'Grep' },
+            s = { ':lua require(\'telescope.builtin\').grep_string(require(\'telescope.themes\').get_ivy({hidden = true}))<CR>', 'Grep String' },
+            h = { ':lua require(\'telescope.builtin\').resume(require(\'telescope.themes\').get_ivy({hidden = true}))<CR>', 'Last Search (includes git)' },
             m = { '<cmd>lua vim.lsp.buf.format()<CR>', 'Format File' },
             t = { ':TodoTelescope<CR>', 'To dos' },
         },
@@ -79,7 +79,9 @@ wk.register(
             c = { ':lua require("dap").continue()<CR>', 'Continue/Start session' },
             o = { ':lua require("dap").step_over()<CR>', 'Step over' },
             i = { ':lua require("dap").step_into()<CR>', 'Step into' },
-            x = { ':lua require("dap").close()<CR>', 'close' }
+            r = { ':lua require("dap").run_to_cursor()<CR>', 'Run to cursor' },
+            x = { ':lua require("dap").close()<CR>', 'close' },
+            e = { ':lua require("dapui").eval()<CR>', 'Evaluate expression' }
         },
 
     },
@@ -110,7 +112,7 @@ wk.register ({
 wk.register(
     {
         ['<C-Enter>'] = { '<Plug>(DBUI_ExecuteQuery)', 'Execute selected query' },
-        ['<leader>em'] = { ':lua require(\'refactoring\').select_refactor()<CR>', 'Refactor' },
+        ['<leader>em'] = { ':lua require(\'refactoring\').select_refactor()<CR>', 'Refactor' }
     },
     {
         mode = "v",

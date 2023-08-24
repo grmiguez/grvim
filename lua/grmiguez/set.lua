@@ -39,6 +39,4 @@ opt.termguicolors = true
 opt.background = 'dark'
 opt.showmode = false
 
-vim.cmd.colorscheme "catppuccin"
-
 require('setup.dadbod')

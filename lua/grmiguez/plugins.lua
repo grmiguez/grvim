@@ -187,6 +187,17 @@ return packer.startup(function(use)
     },
     config = get_setup('lsp-zero'),
   }
+  -- snippets
+  use {
+    "L3MON4D3/LuaSnip",
+    tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    run = "make install_jsregexp",
+    dependencies = {'rafamadriz/friendly-snippets'},
+    config = get_setup('luasnip')
+  }
+  use {
+      'rafamadriz/friendly-snippets'
+  }
   -- java syntax
   use {
     'uiiaoo/java-syntax.vim'
