@@ -105,8 +105,8 @@ wk.register ({
         ['<C-y>'] = { ':redo<CR>', 'Redo'},
         ['<C-s>'] = { ':w<CR>', 'Save Buffer'},
         ['<C-q>'] = { ':BD<CR>', 'Close Buffer'},
-        ['<C-h>'] = { ':TablineBufferPrevious<CR>', 'Go to previous buffer'},
-        ['<C-l>'] = { ':TablineBufferNext<CR>', 'Go to next buffer'},
+        ['<C-h>'] = { ':bprev<CR>', 'Go to previous buffer'},
+        ['<C-l>'] = { ':bnext<CR>', 'Go to next buffer'},
 })
 
 wk.register(

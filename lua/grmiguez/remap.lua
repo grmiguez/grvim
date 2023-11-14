@@ -13,7 +13,7 @@ vim.cmd([[
     autocmd Filetype php inoremap <buffer><C-l> complex_error_log();<ESC>hi
     autocmd Filetype java inoremap <buffer><C-l> System.out.println();<ESC>hi
     autocmd Filetype vue inoremap <buffer><C-l> console.log()<ESC>hi
-    autocmd Filetype ts inoremap <buffer><C-l> console.log();<ESC>hi
+    autocmd Filetype typescript inoremap <buffer><C-l> console.log();<ESC>hi
     autocmd Filetype js inoremap <buffer><C-l> console.log()<ESC>hi
 ]])
 
