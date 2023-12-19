@@ -47,7 +47,7 @@ return packer.startup(function(use)
     -- explorer: Telescope
     use {
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.1',
+        tag = '0.1.5',
         requires = {
             'nvim-lua/plenary.nvim',
             'nvim-telescope/telescope-github.nvim',
@@ -91,11 +91,12 @@ return packer.startup(function(use)
         'sainnhe/gruvbox-material',
         config = get_setup('gruvbox')
     }
-    -- use {
-    --     'catppuccin/nvim',
-    --     as = 'catppuccin',
-    --     config = get_setup('catppuccin'),
-    -- }
+
+    use {
+        'catppuccin/nvim',
+        as = 'catppuccin',
+        -- config = get_setup('catppuccin'),
+    }
     -- better identation
     use {
         'lukas-reineke/indent-blankline.nvim',
