@@ -54,6 +54,10 @@ return packer.startup(function(use)
         },
         config = get_setup('telescope'),
     }
+    use {
+        'nvim-telescope/telescope-project.nvim',
+        -- config = get_setup('telescope-project')
+    }
     -- code navigation: flash nvim
     use {
         'folke/flash.nvim',
@@ -86,16 +90,15 @@ return packer.startup(function(use)
     use {
         'f-person/git-blame.nvim',
     }
-    -- theme: gruvbox-material, for catppuccin comment this use and uncomment the next 
+    -- theme: gruvbox-material, for catppuccin comment this use and uncomment the next
     use {
         'sainnhe/gruvbox-material',
         config = get_setup('gruvbox')
     }
-
     use {
         'catppuccin/nvim',
         as = 'catppuccin',
-        -- config = get_setup('catppuccin'),
+        config = get_setup('catppuccin'),
     }
     -- better identation
     use {
@@ -202,13 +205,16 @@ return packer.startup(function(use)
         config = get_setup('luasnip')
     }
     use {
+        'ray-x/lsp_signature.nvim',
+        config = get_setup('signature')
+    }
+    use {
         'rafamadriz/friendly-snippets'
     }
     -- java syntax
     use {
         'uiiaoo/java-syntax.vim'
     }
-
     -- multi line edition
     use {
         'mg979/vim-visual-multi',
@@ -234,8 +240,8 @@ return packer.startup(function(use)
         'MunifTanjim/nui.nvim',
     }
     use {
-        'jackMort/ChatGPT.nvim',
-        config = get_setup('chatgpt'),
+        "robitx/gp.nvim",
+        config = get_setup('gp'),
     }
     -- dadbod
     use {
@@ -247,18 +253,17 @@ return packer.startup(function(use)
     -- debug
     use {
         "rcarriga/nvim-dap-ui",
-        requires = { "mfussenegger/nvim-dap" },
+        requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" },
         config = get_setup('dap')
     }
-    use {
-        "mxsdev/nvim-dap-vscode-js",
-        module = { "dap-vscode-js" }
-    }
-    use {
-        "microsoft/vscode-js-debug",
-        opt = true,
-        run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
-    }
+    -- use {
+    --     "microsoft/vscode-js-debug",
+    --     run = "npm install --legacy-peer-deps && npx gulp vsDebugServerBundle && mv dist out"
+    -- }
+    -- use {
+    --     "mxsdev/nvim-dap-vscode-js",
+    --     module = { "dap-vscode-js" }
+    -- }
     -- refactoring
     use {
         "ThePrimeagen/refactoring.nvim",

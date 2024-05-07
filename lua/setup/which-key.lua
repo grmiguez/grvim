@@ -19,6 +19,7 @@ wk.register(
             h = { ':lua require(\'telescope.builtin\').resume(require(\'telescope.themes\').get_ivy({hidden = true}))<CR>', 'Last Search (includes git)' },
             m = { '<cmd>lua vim.lsp.buf.format()<CR>', 'Format File' },
             t = { ':TodoTelescope<CR>', 'To dos' },
+            p = { ':lua require(\'telescope\').extensions.project.project{}<CR>', 'Find Projects' },
         },
         g = {
             name = "Git",
@@ -27,6 +28,9 @@ wk.register(
             s = { ':lua require(\'telescope.builtin\').git_stash()<CR>', 'Git Stashes' },
             d = { ':Gvdiffsplit<CR>', 'Git File Diff' },
             m = { ':Gvdiffsplit!<CR>', 'Merge conflicts' },
+            o = { ':GitBlameOpenCommitURL<CR>', 'Open commit in browser' },
+            l = { ':LazyGit<CR>', 'Lazy Git' },
+            p = { ':GHSearchPRs<CR>', 'Lazy Git' },
         },
         k = {
             name = "Keymaps",
@@ -41,6 +45,7 @@ wk.register(
             e = { '<cmd>lua vim.diagnostic.open_float()<CR>', 'Lsp: Open Error' },
             n = { '<cmd>lua vim.diagnostic.goto_next()<CR>', 'Lsp: Next Error' },
             p = { '<cmd>lua vim.diagnostic.goto_prev()<CR>', 'Lsp: Previous Error' },
+            c = { '``', 'Last change' },
         },
         r = {
             name = "Rename and resize",
@@ -62,8 +67,9 @@ wk.register(
         },
         i = {
             name = "ChatGPT",
-            a = { ':ChatGPT<CR>', 'Open ChatGPT' },
-            aa = { ':ChatGPTActAs<CR>', 'Open ChatGPT act as' },
+            v = { ':GpChatToggle vsplit<CR>', 'Toggle ChatGPT in vsplit' },
+            h = { ':GpChatToggle split<CR>', 'Toggle ChatGPT in vsplit' },
+            t = { ':GpChatToggle tabnew<CR>', 'Toggle ChatGPT in a new tab' },
         },
         s = {
             name = "Splits",

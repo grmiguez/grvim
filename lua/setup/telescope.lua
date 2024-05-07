@@ -4,6 +4,14 @@ require('telescope').setup({
             show_line = false,
         },
     },
+    extensions = {
+        project = {
+            base_dirs = {
+                '~/projects'
+            }
+        },
+    },
 })
 
 require('telescope').load_extension('gh')
+require('telescope').load_extension('project')
