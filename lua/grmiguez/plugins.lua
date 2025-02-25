@@ -58,6 +58,13 @@ return packer.startup(function(use)
         'nvim-telescope/telescope-project.nvim',
         -- config = get_setup('telescope-project')
     }
+    -- clipboard
+    use {
+        "AckslD/nvim-neoclip.lua",
+        config = function()
+            require('neoclip').setup()
+        end,
+    }
     -- code navigation: flash nvim
     use {
         'folke/flash.nvim',
@@ -99,6 +106,10 @@ return packer.startup(function(use)
         'catppuccin/nvim',
         as = 'catppuccin',
         config = get_setup('catppuccin'),
+    }
+    use {
+        'rebelot/kanagawa.nvim',
+        config = get_setup('kanagawa'),
     }
     -- better identation
     use {
@@ -155,6 +166,9 @@ return packer.startup(function(use)
     -- which key
     use {
         'folke/which-key.nvim',
+        requires = {
+            'echasnovski/mini.icons'
+        },
         config = get_setup('which-key'),
     }
     -- fuzzy finder
@@ -193,6 +207,7 @@ return packer.startup(function(use)
             { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
             { 'L3MON4D3/LuaSnip' },     -- Required
+            { 'saadparwaiz1/cmp_luasnip' }
         },
         config = get_setup('lsp-zero'),
     }
@@ -273,7 +288,9 @@ return packer.startup(function(use)
         },
         config = get_setup('refactoring'),
     }
-
+    use {
+        "jbyuki/venn.nvim"
+    }
     -- Automatically set up your configuration after cloning packer.nvim
     if PACKER_BOOTSTRAP then
         require('packer').sync()
